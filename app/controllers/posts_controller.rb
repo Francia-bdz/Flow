@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   
   def create
     
-    before_action :user_signed_in?
 
     @post = Post.new(post_params)
 
@@ -69,6 +68,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:picture, :description)
+      params.require(:post).permit(:picture, :description, :user_id)
     end
 end

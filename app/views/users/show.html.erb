@@ -1,0 +1,8 @@
+<%= @user.email%>
+
+<% @user.posts.each do |post| %>
+
+<%= image_tag(post.picture) %>
+<%=post.description%>
+
+<%end%>
