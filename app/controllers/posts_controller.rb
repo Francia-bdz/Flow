@@ -20,7 +20,11 @@ class PostsController < ApplicationController
   end
 
   # POST /posts or /posts.json
+  
   def create
+    
+    before_action :user_signed_in?
+
     @post = Post.new(post_params)
 
     respond_to do |format|

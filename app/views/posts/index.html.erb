@@ -1,4 +1,9 @@
-<p style="color: green"><%= notice %></p>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+  FLOW
+  </a>
+</nav>
 
 <h1>Posts</h1>
 
@@ -12,7 +17,9 @@
      <p style="font-weight: bold">Description:</p>
     <%= post.description %>
     <p>
+    <div class="btn btn-dark">
       <%= link_to "Show this post", post %>
+    </div>
     </p>
   <% end %>
 </div>
