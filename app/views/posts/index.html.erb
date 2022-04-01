@@ -2,10 +2,12 @@
 
 <h1>Posts</h1>
 
+<%= link_to "Nouveau post", new_post_path %>
+
 <div id="posts">
   <% @posts.each do |post| %>
     <p style="font-weight: bold">Picture: </p>
-    <%= image_tag(post.picture) %>
+      <%= image_tag(post.picture, class: 'img-fluid') %>
     <br/>
      <p style="font-weight: bold">Description:</p>
     <%= post.description %>
@@ -15,4 +17,4 @@
   <% end %>
 </div>
 
-<%= link_to "Nouveau post", new_post_path %>
+
