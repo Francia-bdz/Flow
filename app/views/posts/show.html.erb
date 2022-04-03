@@ -1,15 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
 
-<%= image_tag(@post.picture) %>
+<%= image_tag(@post.picture, class="image-fluid") %>
 <br/>
 <%= @post.description %>
 
 
 
 <div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+  <%= link_to "Modifier le post", edit_post_path(@post) %> |
+  <%= link_to "Retour à la page d'accueil", posts_path %>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+  <%= button_to "Supprimer le post", @post, method: :delete %>
 </div>
