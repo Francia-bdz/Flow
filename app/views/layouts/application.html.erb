@@ -18,11 +18,13 @@
       <%= yield %>
 
       <% if user_signed_in? %>
-        <%= link_to current_user.email, edit_user_registration_path %>
+        <p> Ton email : <%= link_to current_user.email, edit_user_registration_path %> </p>
+        <br/>
+        <button class="btn btn-danger">
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        </button>
       <% else %>
-        <%= link_to "Log in", new_user_session_path %>
-        <%= link_to "Register", new_user_registration_path %>
+   
       <% end %>
     </div>
   </body>

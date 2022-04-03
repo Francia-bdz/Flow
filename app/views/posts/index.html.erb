@@ -11,14 +11,14 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <p style="font-weight: bold">Picture: </p>
-      <%= image_tag(post.picture, class: 'img-fluid') %>
+    <%= image_tag(post.picture, class: 'img-fluid') %>
     <br/>
-     <p style="font-weight: bold">Description:</p>
+     <p><strong>Description:</strong>
     <%= post.description %>
     <p>
     <p style="font-weight: bold">Utilisateur:</p>
     <%= post.user %>
+    <br/>
     <div class="btn btn-dark">
       <%= link_to "Show this post", post %>
     </div>
