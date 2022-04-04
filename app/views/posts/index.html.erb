@@ -2,10 +2,12 @@
 
 
 
-<div class="container">
 
+<button class="btn btn-title">
 <%= link_to "Nouveau post", new_post_path, class: "a a-title" %>
+</button>
 
+<br/>
 <div id="posts" class="div_post">
   <% @posts.each do |post| %>
     <%= image_tag(post.picture, class: 'img-fluid rounded float-right') %>
@@ -23,7 +25,7 @@
     </p>
   <% end %>
 </div>
-</div>
+
 
 
 

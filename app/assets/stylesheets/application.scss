@@ -35,6 +35,15 @@
     
  }
 
+ .square-shadow{
+   border-radius: 5px;
+   margin: 3% 5%;
+   padding: 5%;
+   height: 90%;
+   width: 90%;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+ }
+
  .a{
     color :#4DBAF4  ;
     text-decoration: none;
@@ -43,6 +52,10 @@
   .a-title{
    font-size: 30px;
    margin-top: 10%;
+  }
+
+  .a-title:hover{
+   color: #4cb9f4;
   }
 
   .a-white{
@@ -61,6 +74,17 @@
      color: gray;
   }
 
+.btn-title{
+   background-color: none;
+   border: 2px solid #4cb9f4;
+   margin-bottom: 5%;
+   transition: all 0.3s ease-in-out;
+}
+
+.btn-title:hover{
+   background-color: #4cb9f42d;
+
+}
 
 .btn-blue{
    background-color: #4cb9f4;
@@ -68,6 +92,7 @@
 
 .btn-pink{
    background-color: #FF7D97;
+   margin-bottom: 10%;
 }
 .bg-black{
    background-color: black;

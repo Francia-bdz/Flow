@@ -1,9 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
 
-<%= image_tag(@post.picture) %>
+<%= image_tag(@post.picture , class: "img-fluid") %>
+<br/>
+<%= @post.user%>
 <br/>
 <%= @post.description %>
+
 
 
 
