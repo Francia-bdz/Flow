@@ -14,13 +14,15 @@
  *= require_self
  */
 
+ $enable-gradients: true;
+
  @import "bootstrap";
 
  @import 'mdb-ui-kit/css/mdb.min.css';
 
  // Déclaration couleur
 
- $gradient:linear-gradient(90deg, #4cb9f4 0%, rgba(150,243,255,1) 100%);
+ $gradient:linear-gradient(90deg, #4cb9f4 0%, #96f3ff 100%);
 
 
  $theme-colors: (
@@ -34,7 +36,13 @@
  }
 
  .a{
+    color :#4DBAF4  ;
     text-decoration: none;
+  }
+
+  .a-title{
+   font-size: 30px;
+   margin-top: 10%;
   }
 
   .a-white{
@@ -46,6 +54,9 @@
    color: 	#4682B4;
   }
 
+  .a-logout{
+     margin-top: 5%;
+  }
   .text-grey{
      color: gray;
   }
@@ -55,10 +66,22 @@
    background-color: #4cb9f4;
 }
 
+.btn-pink{
+   background-color: #FF7D97;
+}
+.bg-black{
+   background-color: black;
+}
  .img-fluid{
     max-width: 500px;
     object-fit: cover;
  }
 
-
+.title-site{
+   color: #4CB9F4;
+   font-weight: bold;
+   letter-spacing: 5px;
+   font-size: 40px;
+   margin-left: 3%;
+}
 

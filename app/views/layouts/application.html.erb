@@ -14,20 +14,22 @@
   </head>
 
   <body>
-    <div class="container">
+    
       <%= yield %>
 
 <br/>
       <% if user_signed_in? %>
         <p> Votre compte : <%= link_to current_user.email, edit_user_registration_path, class: "a" %> </p>
         <br/>
-        <button class="btn btn-danger bg-gradient text-white">
-        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+        <button class="btn btn-pink bg-gradient text-white">
+        <%= link_to "Se déconnecter", destroy_user_session_path, class: "a a-white a-logout", method: :delete %>
         </button>
-        
       <% else %>
    
       <% end %>
-    </div>
+      
+      <footer class="footer fixed-bottom bg-black"> <p class="title-site"> FLOW </p> </footer>
+
   </body>
+ 
 </html>
