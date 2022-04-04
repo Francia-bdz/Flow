@@ -1,26 +1,30 @@
 
-<nav class="navbar navbar-dark bg-dark">
+
+<nav class="navbar navbar-dark bg-dark bg-gradient">
   <a class="navbar-brand" href="#">
   FLOW
   </a>
 </nav>
 
-<h1>Posts</h1>
 
-<%= link_to "Nouveau post", new_post_path %>
+<link rel="stylesheet" href="/Users/franciab/Desktop/flow/node_modules/mdb-ui-kit/css/mdb.min.css" />
 
-<div id="posts">
+
+<%= link_to "Nouveau post", new_post_path, class: "a a-title" %>
+
+<div id="posts" class="div_post">
   <% @posts.each do |post| %>
-    <%= image_tag(post.picture, class: 'img-fluid') %>
+    <%= image_tag(post.picture, class: 'img-fluid rounded float-right') %>
     <br/>
-     <p><strong>Description:</strong>
-    <%= post.description %>
-    <p>
-    <p style="font-weight: bold">Utilisateur:</p>
+
     <%= post.user %>
-    <br/>
-    <div class="btn btn-dark">
-      <%= link_to "Show this post", post %>
+    <p class="text-grey"><%= post.description %></p>
+
+    
+   
+    <div class="btn btn-blue">
+      <%= link_to "Voir le post", post ,class: "a a-white" %>
+      <br/>
     </div>
     </p>
   <% end %>

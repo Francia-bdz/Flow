@@ -17,12 +17,14 @@
     <div class="container">
       <%= yield %>
 
+<br/>
       <% if user_signed_in? %>
-        <p> Ton email : <%= link_to current_user.email, edit_user_registration_path %> </p>
+        <p> Votre compte : <%= link_to current_user.email, edit_user_registration_path, class: "a" %> </p>
         <br/>
-        <button class="btn btn-danger text-white">
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <button class="btn btn-danger bg-gradient text-white">
+        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
         </button>
+        
       <% else %>
    
       <% end %>
