@@ -1,5 +1,41 @@
 <h2>S'inscrire</h2>
 
+<div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Se connecter", new_session_path(resource_name), class:"menu__item" %><br />
+      <% end %>
+
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "S'inscrire", new_registration_path(resource_name), class:"menu__item" %><br />
+      <% end %>
+
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Mot de passe oublié?", new_password_path(resource_name), class:"menu__item" %><br />
+      <% end %>
+
+      <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+        <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class:"menu__item" %><br />
+      <% end %>
+
+      <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+        <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name), class:"menu__item" %><br />
+      <% end %>
+
+      <%- if devise_mapping.omniauthable? %>
+        <%- resource_class.omniauth_providers.each do |provider| %>
+          <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), method: :post %><br />
+        <% end %>
+      <% end %>
+
+    </ul>
+  </div>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -26,4 +62,3 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>

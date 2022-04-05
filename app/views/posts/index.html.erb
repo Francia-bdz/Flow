@@ -1,8 +1,19 @@
+<div class="div-total">
 
+<div class="div-right">
 <button class="btn btn-title">
 <%= link_to "Nouveau post", new_post_path, class: "a a-title" %>
 </button>
+        <p> Votre compte : <%= link_to current_user.email, edit_user_registration_path, class: "a" %> </p>
+        <br/>
+        <button class="btn btn-pink">
+        <%= link_to "Se déconnecter", destroy_user_session_path, class: "a a-white a-logout", method: :delete %>
+        </button>
 
+
+</div>
+
+<div class="div-left">
 <div id="posts" class="div_post">
   <% @posts.each do |post| %>
     <%= image_tag(post.picture, class: 'img-fluid rounded float-right') %>
@@ -19,6 +30,10 @@
     </div>
 </p>
   <% end %>
+</div>
+
+</div>
+
 </div>
 
 

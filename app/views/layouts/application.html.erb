@@ -19,16 +19,7 @@
     <div class="square-shadow">
       <%= yield %>
 
-<br/>
-      <% if user_signed_in? %>
-        <p> Votre compte : <%= link_to current_user.email, edit_user_registration_path, class: "a" %> </p>
-        <br/>
-        <button class="btn btn-pink">
-        <%= link_to "Se déconnecter", destroy_user_session_path, class: "a a-white a-logout", method: :delete %>
-        </button>
-      <% else %>
-   
-      <% end %>
+      <br/>
 
       </div>
       </div>
